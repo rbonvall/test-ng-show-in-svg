@@ -1,0 +1,22 @@
+<!doctype html>
+<html ng-app="TestApp">
+
+<div ng-controller="DivCtrl">
+  <span> Hello </span>
+  <span ng-show="false"> World </span>
+</div>
+
+<svg width="200" height="100" ng-controller="SvgCtrl">
+  <rect x="25"  y="25" width="50" height="50" fill="navy"></rect>
+  <rect x="100" y="25" width="50" height="50" fill="maroon" ng-show="false"></rect>
+</svg>
+
+<script src="angular-1.2.0rc1.js"></script>
+<script>
+  var app = angular.module('TestApp', []);
+  app.controller('SvgCtrl', function () {});
+  app.controller('DivCtrl', function () {});
+</script>
+
+
+
